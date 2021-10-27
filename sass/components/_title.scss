@@ -1,0 +1,4 @@
+.title {
+  @include font(null, 36px, 700, 1.17, null, var(--primary-dark-text-color));
+  text-align: center;
+}

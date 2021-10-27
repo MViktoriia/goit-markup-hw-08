@@ -1,0 +1,28 @@
+.address {
+  font-style: normal;
+}
+
+.address__text {
+  @include font(null, 14px, null, 1.71, null, var(--primary-light-text-color));
+  margin-bottom: 9px;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  @include font(
+    null,
+    14px,
+    null,
+    1.71,
+    null,
+    var(--secondary-light-text-color)
+  );
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

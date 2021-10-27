@@ -1,0 +1,200 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  min-height: 581px;
+  background: var(--primary-light-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal__close-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: var(--primary-light-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: var(--secondary-dark-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.modal__close-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.modal__title {
+  @include font(
+    null,
+    20px,
+    700,
+    calc(23 / 20),
+    null,
+    var(--primary-dark-text-color)
+  );
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal__form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal__form-lable {
+  display: block;
+  margin-bottom: 4px;
+  @include font(
+    null,
+    12px,
+    null,
+    calc(14 / 12),
+    0.01em,
+    var(--primary-text-color)
+  );
+}
+
+.modal__input-wrapper {
+  position: relative;
+  color: var(--secondary-dark-text-color);
+}
+
+.modal__form-input {
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  padding-left: 42px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.modal__input-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal__form-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__comment-form-field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.modal__textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+  @include font(null, 12px, null, calc(14 / 12), 0.01em, null);
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__checkbox-form-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  .modal__checkbox:checked + & {
+    background-color: var(--accent-color);
+    border: transparent;
+  }
+  .modal__checkbox:focus + & {
+    border-color: var(--accent-color);
+  }
+}
+
+.modal__checkbox-icon {
+  width: 16px;
+  height: 15px;
+}
+
+.modal__checkbox-lable {
+  display: block;
+  margin-left: 8px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.modal__agreement-terms-link {
+  color: var(--accent-color);
+}
+
+.modal__submit-button {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 56px;
+  padding-right: 55px;
+  @include font(
+    null,
+    16px,
+    700,
+    calc(30 / 16),
+    0.06em,
+    var(--primary-light-text-color)
+  );
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: var(--secondary-accent-color);
+  }
+}

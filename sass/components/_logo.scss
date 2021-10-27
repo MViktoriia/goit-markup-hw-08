@@ -1,0 +1,12 @@
+.logo {
+  @include font(Raleway, 26px, 700, 1.19, null, var(--accent-color));
+  font-style: normal;
+}
+
+.logo_dark {
+  color: var(--secondary-dark-text-color);
+}
+
+.logo_light {
+  color: var(--primary-light-text-color);
+}

@@ -1,0 +1,26 @@
+/* основной темный цвет текста (заголовки) #212121 */
+/* черный текст  #000000*/
+/* основной цвет текста (не заголовки) #757575 */
+/* белый текст/фон #FFFFFF */
+/* вторичный белый цвет текста rgba(255, 255, 255, 0.6); */
+/* вторичный светлый цвет фона #F5F4FA */
+/* акцент #2196F3 */
+/* ховер кнопки Заказать услугу #188ce8 */
+/* Основной шрифт Roboto */
+
+:root {
+  --primary-text-color: #757575;
+  --primary-dark-text-color: #212121;
+  --secondary-dark-text-color: #000000;
+  --primary-light-text-color: #ffffff;
+  --secondary-light-text-color: rgba(255, 255, 255, 0.6);
+  --accent-color: #2196f3;
+  --secondary-accent-color: #188ce8;
+  --primary-light-background-color: #ffffff;
+  --secondary-light-background-color: #f5f4fa;
+  --dark-background-color: #2f303a;
+  --header-line-boder-color: #ececec;
+  --card-border-color: #eeeeee;
+  --icon-color: #afb1b8;
+  --footer-social-icon-bg-color: rgba(255, 255, 255, 0.1);
+}
