@@ -4,12 +4,23 @@
 }
 
 .header__container {
+  // position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
+.header_not-mobile-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: flex;
+}
+
 .header__logo {
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  // margin-right: 93px;
+  // padding-top: 24px;
+  // padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
