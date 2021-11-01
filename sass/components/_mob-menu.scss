@@ -61,6 +61,13 @@
   fill: currentColor;
 }
 
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .mob-menu__sosial-list {
   display: flex;
   flex-wrap: wrap;
