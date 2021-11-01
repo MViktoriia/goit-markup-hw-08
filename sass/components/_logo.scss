@@ -1,5 +1,10 @@
 .logo {
-  @include font(Raleway, 26px, 700, 1.19, null, var(--accent-color));
+  @include font(Raleway, 24px, 700, calc(28 / 24), null, var(--accent-color));
+
+  @media screen and (min-width: 1200px) {
+    @include font(Raleway, 26px, 700, calc(31 / 26), null, var(--accent-color));
+  }
+
   font-style: normal;
 }
 

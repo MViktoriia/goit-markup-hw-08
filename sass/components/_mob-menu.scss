@@ -84,4 +84,8 @@
 
 .mob-menu__sosial-link {
   @include font(null, 18px, 500, 1.22, 0.02em, var(--accent-color));
+
+  @media screen and (max-width: 479px) {
+    @include font(null, 3.75vw, 500, 1.22, 0.02em, var(--accent-color));
+  }
 }
