@@ -1,12 +1,19 @@
 .contacts-list {
   // display: flex;
-  // margin-left: auto;
   margin-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
+    margin-left: 84px;
+  }
 }
 
 .contacts-list__item:not(:last-child) {
   // margin-right: 50px;
   margin-bottom: 32px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .contacts-list__link {
@@ -14,7 +21,7 @@
   // align-items: center;
   // padding-top: 32px;
   // padding-bottom: 32px;
-  // @include font(null, 14px, 500, 1.14, 0.02em, var(--primary-text-color));
+
   @include font(
     null,
     24px,
@@ -28,19 +35,64 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+
+    @include font(
+      null,
+      12px,
+      500,
+      calc(14 / 12),
+      0.02em,
+      var(--primary-text-color)
+    );
+  }
 }
 
 .contact-list__link_mob-menu_tel {
   @media screen and (max-width: 479px) {
     @include font(null, 7vw, 500, calc(40 / 34), 0.02em, var(--accent-color));
   }
+
   @media screen and (min-width: 480px) {
     @include font(null, 34px, 500, calc(40 / 34), 0.02em, var(--accent-color));
   }
+
+  @media screen and (min-width: 768px) {
+    @include font(
+      null,
+      12px,
+      500,
+      calc(14 / 12),
+      0.02em,
+      var(--primary-text-color)
+    );
+  }
+  // @include font(null, 14px, 500, 1.14, 0.02em, var(--primary-text-color));
 }
 
 .contacts-list__icon {
   display: none;
-  margin-right: 10px;
-  fill: currentColor;
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  // margin-right: 10px;
+}
+
+.contacts-list__icon_envelope {
+  @media screen and (min-width: 768px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+
+.contacts-list__icon_phone {
+  @media screen and (min-width: 768px) {
+    width: 10px;
+    height: 14px;
+  }
 }

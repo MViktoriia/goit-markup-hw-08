@@ -6,15 +6,22 @@
 .header__container {
   // position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .header_not-mobile-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   @media screen and (max-width: 767px) {
     display: none;
   }
-  display: flex;
 }
 
 .header__logo {
