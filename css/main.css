@@ -549,12 +549,17 @@ img {
 
 .address {
   font-style: normal;
-  text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .address {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .address {
+    text-align: center;
   }
 }
 
@@ -1253,9 +1258,14 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .clients__item {
     flex-basis: calc(100% / 3 - 30px);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .clients__item {
     margin-left: 30px;
     margin-bottom: 30px;
   }
@@ -1304,8 +1314,13 @@ img {
 
 .footer__logo {
   display: block;
-  text-align: center;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__logo {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
