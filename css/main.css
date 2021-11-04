@@ -119,11 +119,18 @@ img {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
+  line-height: calc(33 / 28);
   color: var(--primary-dark-text-color);
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: calc(42 / 36);
+  }
 }
 
 .section {
@@ -680,7 +687,7 @@ img {
   padding: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     width: 450px;
   }
@@ -733,7 +740,13 @@ img {
   margin-bottom: 12px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
+  .modal__title {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .modal__title {
     line-height: calc(30 / 20);
   }
@@ -848,14 +861,19 @@ img {
 }
 
 .modal__checkbox-lable {
-  display: block;
   margin-left: 8px;
   margin-bottom: 0;
   font-size: 14px;
   line-height: 1.71;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
+  .modal__checkbox-lable {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .modal__checkbox-lable {
     font-size: 12px;
     line-height: calc(14 / 12);
@@ -1162,7 +1180,13 @@ img {
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (min-width: 768px) {

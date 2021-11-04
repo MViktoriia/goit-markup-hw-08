@@ -1,4 +1,15 @@
 .title {
-  @include font(null, 36px, 700, 1.17, null, var(--primary-dark-text-color));
+  @include font(
+    null,
+    28px,
+    700,
+    calc(33 / 28),
+    null,
+    var(--primary-dark-text-color)
+  );
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    @include font(null, 36px, null, calc(42 / 36), null, null);
+  }
 }
