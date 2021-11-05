@@ -25,13 +25,14 @@
 }
 
 .services__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   @include font(null, 14px, 700, 1.14, null, var(--primary-light-text-color));
-  text-align: center;
   text-transform: uppercase;
   background-color: rgba(47, 48, 58, 0.8);
-  padding-top: 27px;
-  padding-bottom: 27px;
   width: 100%;
+  height: 70px;
 }
