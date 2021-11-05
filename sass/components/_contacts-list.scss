@@ -1,8 +1,6 @@
 .contacts-list {
-  margin-bottom: 64px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 0px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -11,14 +9,16 @@
 }
 
 .contacts-list__item:not(:last-child) {
-  margin-bottom: 32px;
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 10px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-right: 30px;
-    margin-bottom: 0;
   }
 }
 
@@ -55,14 +55,7 @@
     display: flex;
     align-items: center;
 
-    @include font(
-      null,
-      12px,
-      500,
-      calc(14 / 12),
-      0.02em,
-      var(--primary-text-color)
-    );
+    @include font(null, 12px, null, calc(14 / 12), null, null);
   }
 
   @media screen and (min-width: 1200px) {
@@ -72,28 +65,23 @@
   }
 }
 
+.contact-list__link_e-mail {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 21px;
+  }
+}
+
 .contact-list__link_mob-menu_tel {
   @media screen and (max-width: 479px) {
-    @include font(null, 7vw, 500, calc(40 / 34), 0.02em, var(--accent-color));
+    @include font(null, 7vw, null, calc(40 / 34), null, var(--accent-color));
   }
 
-  @media screen and (min-width: 480px) {
-    @include font(null, 34px, 500, calc(40 / 34), 0.02em, var(--accent-color));
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @include font(null, 34px, null, calc(40 / 34), null, var(--accent-color));
   }
 
-  @media screen and (min-width: 768px) {
-    @include font(
-      null,
-      12px,
-      500,
-      calc(14 / 12),
-      0.02em,
-      var(--primary-text-color)
-    );
-  }
-
-  @media screen and (min-width: 1200px) {
-    @include font(null, 14px, null, calc(16 / 14), null, null);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 21px;
   }
 }
 

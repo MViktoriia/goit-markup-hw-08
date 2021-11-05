@@ -20,15 +20,23 @@
   }
 }
 
+.footer__left {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+
 .footer__center {
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
   @media screen and (min-width: 768px) {
     margin-left: 165px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
-    margin-bottom: 0x;
   }
 }
 
@@ -68,7 +76,7 @@
   margin-bottom: 20px;
 }
 
-.footer__wraper-for-tablet {
+.footer__contact-wraper {
   @media screen and (max-width: 1200px) {
     margin-bottom: 60px;
   }
